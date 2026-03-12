@@ -3,7 +3,7 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url("inage.png");
+    background-image: url("image.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -14,7 +14,7 @@ h1{
     padding-top: 10px;
 }
 
-#knapp{
+#keapp{
     margin: auto;
     padding: 15px 30px;
     font-size: 50px;
@@ -23,7 +23,19 @@ h1{
     width: 250px;
     height: 125px;
 }
+#keapp:hover{
+    color: blue;
+}
 
-#knapp:hover{
+#kaapp{
+    margin: auto;
+    padding: 15px 30px;
+    font-size: 50px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    width: 250px;
+    height: 125px;
+}
+#kaapp:hover{
     color: blue;
 }
