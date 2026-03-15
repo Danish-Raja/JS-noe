@@ -3,7 +3,7 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url("inage.png");
+    background-image: url("images/inage.png");
     background-size: cover;
     background-repeat: no-repeat;
 }

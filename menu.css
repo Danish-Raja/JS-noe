@@ -1,0 +1,24 @@
+body{
+font-family:Arial;
+background:lightgrey;
+background-image: url(images/ioage.png);
+background-size: 400px;
+background-repeat: no-repeat;
+background-position: right 120px;
+}
+
+input{
+padding:10px;
+margin:20px;
+width: 1350px;
+border-radius: 10px;
+}
+
+.food{
+background:gray;
+margin:10px;
+padding:15px;
+width:200px;
+border-radius:10px;
+}
+
