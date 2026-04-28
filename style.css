@@ -1,30 +1,72 @@
-body{
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-image: url("images/inage.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+body {
+  font-family: Arial;
+  text-align: center;
+  background: #f4f4f4;
 }
 
-h1{
-    text-align: center;
-    margin: 0;
-    padding-top: 10px;
+/* PRODUKTER */
+#display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-#knapp{
-    margin: auto;
-    padding: 15px 30px;
-    font-size: 50px;
-    background-color: black;
-    color: white;
-    width: 250px;
-    height: 125px;
-    border-radius: 100px;
+.produkt {
+  background: white;
+  width: 220px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-#knapp:hover{
-    color: blue;
+.produkt:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.produkt img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* BUTTONS */
+button {
+  margin: 5px;
+  padding: 8px;
+  border: none;
+  background: green;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: darkgreen;
+}
+
+span {
+  font-size: 18px;
+  margin: 0 5px;
+}
+
+/* 🧨 FIX: CART LAYOUT */
+.cart-items {
+  display: flex;
+  flex-direction: row;   /* viktig */
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center; /* gjør at de ligger pent i midten */
+  align-items: flex-start;
+}
+
+/* FIX: gjør at items ikke strekker seg feil */
+.cart-item {
+  width: 200px;
+  flex-shrink: 0; /* hindrer at de krymper rart */
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
 }
