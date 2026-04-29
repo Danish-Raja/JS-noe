@@ -1,7 +1,7 @@
 const produkter = [
-  { navn: "Eple", pris: 20, url: "https://cdn.pixabay.com/photo/2023/09/07/08/44/apple-fruit-8238633_1280.png" },
-  { navn: "Banan", pris: 25, url: "https://images3.alphacoders.com/658/658610.jpg" },
-  { navn: "Melon", pris: 35, url: "https://thumbs.dreamstime.com/b/fruit-isolated-white-background-melon-fruit-isolated-white-background-melon-159809164.jpg" },
+  { navn: "Epler", pris: 20, url: "https://cdn.pixabay.com/photo/2023/09/07/08/44/apple-fruit-8238633_1280.png" },
+  { navn: "Bananer", pris: 25, url: "https://images3.alphacoders.com/658/658610.jpg" },
+  { navn: "Meloner", pris: 35, url: "https://thumbs.dreamstime.com/b/fruit-isolated-white-background-melon-fruit-isolated-white-background-melon-159809164.jpg" },
   { navn: "Appelsiner", pris: 30, url: "https://www.siwskriv.no/wp-content/uploads/2022/11/Hel-appelsin-1.png" }
 ];
 
