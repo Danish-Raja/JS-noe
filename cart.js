@@ -10,7 +10,7 @@ function visVogn() {
   cart.innerHTML = "";
 
   if (vogn.length === 0) {
-    cart.innerHTML = "<h3>Vogna er tom 🧺</h3>";
+    cart.innerHTML = "<h3>Vogna er tom</h3>";
     return;
   }
 
