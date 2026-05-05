@@ -1,23 +1,37 @@
+console.log("cart.js startet");
+
 /* Henter HTML-elementet der vogna skal vises */
 const cart = document.getElementById("cart");
+
+console.log("Cart funnet:", cart);
 
 /* Henter lagret vogn fra localStorage
    Hvis det ikke finnes noe, brukes en tom liste */
 let vogn = JSON.parse(localStorage.getItem("vogn")) || [];
 
+console.log("Vogn hentet:", vogn);
+
 /* Funksjon som lagrer vogna */
 function lagre() {
+
+  console.log("Lagrer vogn:", vogn);
+
   localStorage.setItem("vogn", JSON.stringify(vogn));
 }
 
 /* Funksjon som viser alt i vogna */
 function visVogn() {
 
+  console.log("Viser vogn");
+
   /* Tømmer siden før vi tegner på nytt */
   cart.innerHTML = "";
 
   /* Hvis vogna er tom */
   if (vogn.length === 0) {
+
+    console.log("Vogna er tom");
+
     cart.innerHTML = "<h3>Vogna er tom</h3>";
     return;
   }
@@ -28,8 +42,12 @@ function visVogn() {
   /* Går gjennom alle varer i vogna */
   for (let i = 0; i < vogn.length; i++) {
 
+    console.log("Behandler vare:", vogn[i]);
+
     /* Regner ut pris per vare */
     let itemTotal = vogn[i].pris * vogn[i].antall;
+
+    console.log("Item total:", itemTotal);
 
     totalPris += itemTotal;
     totalAntall += vogn[i].antall;
@@ -51,8 +69,12 @@ function visVogn() {
 
     fjernBtn.onclick = function () {
 
+      console.log("Fjerner vare:", vogn[i]);
+
       /* Fjerner varen fra lista */
       vogn.splice(i, 1);
+
+      console.log("Vogn etter sletting:", vogn);
 
       lagre();
       visVogn();
@@ -61,6 +83,9 @@ function visVogn() {
     item.appendChild(fjernBtn);
     cart.appendChild(item);
   }
+
+  console.log("Total pris:", totalPris);
+  console.log("Total antall:", totalAntall);
 
   /* Total boks nederst */
   const total = document.createElement("div");
